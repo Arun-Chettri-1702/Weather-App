@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const descriptionDisplay = document.getElementById("description");
   const errorMsg = document.getElementById("error-message");
 
-  const API_KEY = "eed16a8bc2a67136e2eb15a016163c30";
+  const API_KEY = "RANDOM_API_KEY";
 
   getButton.addEventListener("click", async () => {
     // async for await to wait for server response
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
       displayWeatherData(weatherData);
       cityInput.value = "";
     } catch (e) {
-      console.log(e);~
-      showsError();
+      console.log(e);
+      ~showsError();
     }
   });
 
