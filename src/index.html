@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="script.js" defer></script>
+    <style>
+      #city_weather {
+        margin-top: 20px;
+        color: white;
+        text-align: center;
+        gap: 2rem;
+        margin-bottom: 8px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      #error-message {
+        color: #ff5722;
+        margin-top: 20px;
+        margin-bottom: 8px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-align: center;
+        font-weight: bolder;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center h-screen w-screen bg-gray-950">
+    <main class="h-fit w-fit bg-gray-800 rounded-md" id="container">
+      <h1 class="text-white p-3 text-center m-2 text-2xl rounded-md mb-5">
+        Weather App
+      </h1>
+      <div
+        class="text-white mb-5 p-2 gap-4 flex justify-between"
+        id="inputContainer"
+      >
+        <input
+          type="text"
+          placeholder="Search for a city..."
+          class="p-3 rounded-md w-fit text-black"
+          id="city-input"
+        />
+        <button
+          class="bg-purple-700 p-2 text-wrap rounded-md hover:bg-purple-900"
+          id="get-weather"
+        >
+          Get Weather
+        </button>
+      </div>
+
+      <div id="city_weather" class="hidden">
+        <h1 id="city-name"></h1>
+        <p id="temperature"></p>
+        <p id="description"></p>
+      </div>
+      <p id="error-message" class="hidden">City not found. Please try again.</p>
+    </main>
+  </body>
+</html>
